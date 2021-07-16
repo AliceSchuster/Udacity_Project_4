@@ -48,7 +48,7 @@ For this project, I've have used Python 3.6.3 and the following Python libraries
 
 ## Results
 
-Please find more information on this project in [my medium post] (https://medium.com/p/529fce2a9996/).
+Please find more information on this project in [my medium post](https://medium.com/p/529fce2a9996/).
 
 In order to predict whether an offer would be successful, I balanced the two groups and used Logistic Regression, Random Forrest Classifier, and AdaBoost Classifier for classification.
 
