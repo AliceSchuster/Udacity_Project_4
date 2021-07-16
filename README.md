@@ -11,7 +11,7 @@ Using the Starbucks dataset, this project aims to build and evaluate different m
 
 The following three datasets are provided by Starbucks and Udacity:
 
-    portfolio.json: Offers sent during 30-day test period (10 offers)
+    portfolio.json: Offers sent during 30-day test period (in total 10 offers)
         id (string): offer id
         offer_type (string): bogo, discount, informational
         difficulty (integer): money required to be spent to receive reward
@@ -20,7 +20,7 @@ The following three datasets are provided by Starbucks and Udacity:
         channels (list of strings): web, email, mobile, social
         
 
-    profile.json: Rewards program users (17000 users)
+    profile.json: Rewards program users (in total 17.000 users)
         age (integer) missing value encoded as 118
         became_member_on (integer): date when customer created an app account - format YYYYMMDD
         gender (string): gender of customer - M, F, O (other)       
@@ -28,11 +28,11 @@ The following three datasets are provided by Starbucks and Udacity:
         income (float): income of customer
 
 
-    transcript.json: Event log (306534 events)
+    transcript.json: Event log (in total 306.534 events)
         event (string): offer received, offer viewed, transaction, offer completed
         person (string): customer id
         time (integer): hours after start of test (start: t=0)
-        value (dictionary of strings):  different values (offer id or transaction amount) depending on event type
+        value (dictionary of strings):  different values (offer id, transaction amount, and reward) depending on event type
         
         
   ## Installation
@@ -54,4 +54,4 @@ In order to predict whether an offer would be successful, I balanced the two gro
 
 In this use case, our goal is to reduce the number of false negatives and increase the number of true positives. The reason for this is, that customers who took an offer spent twice as money as customers who do not take an offer. As sending an offer via app is not expensive for Starbucks, the number of true negatives is not of high relevance in our case.
 
-The best model was Random Forrest with a recall 73% and a f2-Score 73,3%.
+The best model was Random Forrest using balanced groups: Accuracy 74,2%, Recall 73,0%, and F2-Score 73,3%)
